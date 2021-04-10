@@ -1,3 +1,6 @@
+# message may not be directly go to inbox
+# it may be directed to spam folder
+
 import os
 import smtplib
 import ssl
