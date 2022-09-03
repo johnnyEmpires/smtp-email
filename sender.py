@@ -33,10 +33,10 @@ with open('mail_list') as ml:
 	rcvr = ml.readlines()
 	rcvr = [x.replace('\n', '') for x in rcvr]
 
-ctx = ssl.create_default_context()
-with smtplib.SMTP_SSL(smtp_server, port, context=ctx) as server:
+#ctx = ssl.create_default_context()
+with smtplib.SMTP_SSL(smtp_server, port) as server:
 	try:
-		server.ehlo()
+		#server.ehlo()
 		server.login(sender_email, password)
 
 		msg.set_content(f'system generated message')
